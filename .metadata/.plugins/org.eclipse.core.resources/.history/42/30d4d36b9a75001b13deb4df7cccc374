@@ -1,0 +1,23 @@
+package com.laptrinhjavaweb.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user")
+public class UserEntity {
+
+	@Column(name = "username")
+	private String userName;
+	
+	@Column(name = "password")
+	private String passWord;
+
+	@Column(name = "fullname")
+	private String fullName;
+	
+	@Column(name = "status")
+	private Integer  status;
+	
+}

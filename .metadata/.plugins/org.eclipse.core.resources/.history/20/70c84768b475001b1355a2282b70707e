@@ -1,0 +1,39 @@
+package com.laptrinhjavaweb.entity;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+
+@MappedSuperclass //dinh nghia BaseEntity la parent entity
+//@EntityListeners(AuditingEntityListener.class) //config 
+public class BaseEntity {
+	
+	@Id //notnull va primary 
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // set autoincrement
+	private Long id;
+	
+	@Column (name = "createddate")
+	@CreatedDate
+	private Date createdDate;
+	
+	@Column (name = "modifieddate")
+	@LastModifiedDate
+	private Date modifiedDate;
+	
+	@Column (name = "createdby")
+	@CreatedBy
+	private String createdBy;
+	
+	@Column (name = "modifiedby")
+	@LastModifiedBy
+	private String modifiedBy;
+}

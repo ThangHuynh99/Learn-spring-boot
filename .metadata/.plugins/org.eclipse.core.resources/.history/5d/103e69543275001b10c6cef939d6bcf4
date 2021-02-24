@@ -1,0 +1,5 @@
+package com.laptrinhjavaweb.api.dto;
+
+public class NewDTO {
+
+}

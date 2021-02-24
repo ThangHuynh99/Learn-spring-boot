@@ -1,0 +1,10 @@
+package com.laptrinhjavaweb.api;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class NewAPI {
+	
+	@RequestMapping(value = "/new", method = RequestMethod.POST)
+}

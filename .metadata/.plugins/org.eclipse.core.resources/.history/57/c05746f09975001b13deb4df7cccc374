@@ -1,0 +1,14 @@
+package com.laptrinhjavaweb.entity;
+
+import javax.persistence.Column;
+
+public class Role {
+
+	@Column(name = "code")
+	private String code;
+	
+	@Column(name = "name")
+	private String name;
+	
+	
+}
