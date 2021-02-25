@@ -69,5 +69,6 @@ public class NewEntity extends BaseEntity {
 	}
 	
 	
+	
 }
 
